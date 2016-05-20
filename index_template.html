@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ORF Streams</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+      body {
+        width: 30%;
+        margin: auto;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ORF Streams</h1>
+    <table class="table table-bordered">
+      {% for channel in channels %}
+      <tr>
+        <td>{{ channel.name }}</td>
+        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q8c/orf.sdp/playlist.m3u8">720p</a></td>
+        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q6a/orf.sdp/playlist.m3u8">544p</a></td>
+        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q4a/orf.sdp/playlist.m3u8">368p</a></td>
+        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q1a/orf.sdp/playlist.m3u8">192p</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
