@@ -8,7 +8,7 @@ Open [index.html] and drag one of the links into a video player that supports m3
 
 ## License
 
-WTFPL
+CC BY 4.0
 
 [index.html]:https://cdn.rawgit.com/Yepoleb/orfstreams/master/index.html
 [VLC]:https://www.videolan.org/vlc/
