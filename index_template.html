@@ -22,18 +22,24 @@
       {% for channel in channels %}
       <tr>
         <td>{{ channel.name }}</td>
-        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q8c/orf.sdp/playlist.m3u8">720p</a></td>
-        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q6a/orf.sdp/playlist.m3u8">544p</a></td>
-        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q4a/orf.sdp/playlist.m3u8">368p</a></td>
-        <td><a href="http://apasfiisl.apa.at/ipad/{{ channel.id }}_q1a/orf.sdp/playlist.m3u8">192p</a></td>
+        <td><a href="https://{{ channel.id }}.cdn.ors.at/out/u/{{ channel.id }}/q8c/manifest.m3u8">720p</a></td>
+        <td><a href="https://{{ channel.id }}.cdn.ors.at/out/u/{{ channel.id }}/q6a/manifest.m3u8">540p</a></td>
+        <td><a href="https://{{ channel.id }}.cdn.ors.at/out/u/{{ channel.id }}/q4a/manifest.m3u8">360p</a></td>
+        <td><a href="https://{{ channel.id }}.cdn.ors.at/out/u/{{ channel.id }}/q1a/manifest.m3u8">180p</a></td>
       </tr>
       {% endfor %}
     </table>
+
+    <div>
+      For VLC you need to set the user agent like this:
+    </div>
+
+    <span class="monospace">vlc "https://orf2b.cdn.ors.at/out/u/orf2b/q8c/manifest.m3u8" :http-user-agent=Mozilla/5.0</span>
+
+    <div>
+      Update 2018-10-10: The four main streams seem to no longer have
+      the user agent block in place, but it's still necessary for the
+      state specific ones.
+    </div>
   </body>
-
-  <div>
-    For VLC you need to set the user agent like this:
-  </div>
-
-  <span class="monospace">vlc "http://apasfiisl.apa.at/ipad/orf1_q8c/orf.sdp/playlist.m3u8" :http-user-agent=Mozilla/4.0</span>
 </html>

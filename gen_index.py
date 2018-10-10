@@ -4,7 +4,7 @@ CHANNELS = [
     ('orf1', 'ORF eins'),
     ('orf2', 'ORF 2'),
     ('orf3', 'ORF III'),
-    ('orfs', 'ORF SPORT +'),
+    ('web03', 'ORF SPORT +'),
     ('orf2b', 'ORF B'),
     ('orf2k', 'ORF K'),
     ('orf2n', 'ORF NÖ'),
